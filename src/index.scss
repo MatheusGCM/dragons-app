@@ -1,0 +1,38 @@
+@use './styles/variables' as *;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: 'Cinzel', serif;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}

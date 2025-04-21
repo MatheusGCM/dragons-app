@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.registerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.registerCard {
+  margin-top: 2rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: none;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-top: solid 1px rgba($gold, 0.3);
+    border-left: solid 1px rgba($gold, 0.3);
+    border-bottom: solid 2px rgba($gold, 0.3);
+    border-right: solid 2px rgba($gold, 0.6);
+  }
+}
+
+.registerCardHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.registerCardTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $gold;
+  margin-bottom: 0.5rem;
+}
+
+.registerCardSubtitle {
+  font-size: 0.875rem;
+  color: $muted-foreground;
+}
+

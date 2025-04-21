@@ -1,0 +1,58 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.loginCard {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  @media (min-width: 768px) {
+    background-color: $card;
+    border: solid 1px rgba($gold, 0.3);
+  }
+}
+
+.loginCardHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.loginCardTitle {
+  color: $gold;
+  text-align: center;
+}
+
+.loginCardSubtitle {
+  color: $muted-foreground;
+  text-align: center;
+}
+
+.loginCardForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.loginCardFormField  {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & label {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+}
+
+.loginCardFormButton {
+  @include button-base;
+}
+

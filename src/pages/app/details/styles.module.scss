@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.detailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsCard {
+  margin-top: 2rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    border-top: solid 1px rgba($gold, 0.3);
+    border-left: solid 1px rgba($gold, 0.3);
+    border-bottom: solid 2px rgba($gold, 0.3);
+    border-right: solid 2px rgba($gold, 0.6);
+  }
+}
+
+.detailsCardHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.detailsCardTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $gold;
+  margin-bottom: 0.5rem;
+}
+
+.detailsCardSubtitle {
+  font-size: 0.875rem;
+  color: $muted-foreground;
+}
+

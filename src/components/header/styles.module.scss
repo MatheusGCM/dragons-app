@@ -1,0 +1,66 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $card;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid rgba($gold, 0.2);
+
+    &[data-justify='true'] {
+        justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        padding: 2rem;
+    }
+}
+
+.headerTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.headerTitle {
+    display: none;
+    color: $gold;
+    @media (min-width: 768px) {
+        display: flex;
+      }
+}
+
+.iconSwords{
+    display: none;
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.headerButton {
+    @include button-base;
+    border: 1px solid rgba($gold, 0.4);
+    color: white;
+    background-color: transparent;
+    display: none;
+
+    @media (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.headerButtonIcon {
+    @include button-base;
+    border: 1px solid rgba($gold, 0.4);
+    color: white;
+    background-color: transparent;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}

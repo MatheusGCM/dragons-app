@@ -1,0 +1,38 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+
+.formCardFormButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.formCardFormCancelButton {
+  @include button-base;
+  border: 1px solid rgba($gold, 0.4);
+  color: white;
+  background-color: transparent; 
+}
+
+.formCardFormSubmitButton {
+  @include button-base;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 0.75rem;
+  height: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+

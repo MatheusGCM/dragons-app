@@ -1,0 +1,120 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.container {
+    display: flex;
+    gap: 0.4rem;
+    position: relative;
+}
+
+.dragonCardContainer {
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: $card;
+    border: solid 1px rgba($gold, 0.3);
+    transition: border-color 0.3s ease;
+    width: 100%;
+
+    & h4 {
+        font-size: 0.75rem;
+        color: $muted-foreground;
+        font-weight: 500;
+    }
+
+    & p {
+       margin: 0;
+       padding: 0; 
+       color: white;
+    }
+
+    &:hover {
+        border-color: $gold;
+    }
+}
+
+.dragonCartHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & h3 {
+        text-align: start;
+        color: $gold;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+    & img{
+        width: 5rem;
+        height: 5rem;
+        border: 1px solid $gold;
+        border-radius: 9999px;
+        
+    }
+}
+
+.trashContainer {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: rgba(white, 0.3);
+    z-index: 10;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #e74c3c;
+    }
+}
+
+.confirmDeleteContainer {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.cancelButton, .confirmButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton {
+  background-color: #e74c3c;
+  color: white;
+  
+  &:hover {
+    background-color: #c0392b;
+  }
+}
+
+.confirmButton {
+  background-color: #2ecc71;
+  color: white;
+  
+  &:hover {
+    background-color: #27ae60;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
